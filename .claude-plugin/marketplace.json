@@ -12,7 +12,7 @@
       "name": "privacypilot",
       "description": "Automatically generate Play Store-compliant privacy policies from AndroidManifest.xml and Gradle dependencies. Deploys to GitHub Pages.",
       "version": "1.0.0",
-      "source": "./privacypilot",
+      "source": "./",
       "author": {
         "name": "SUDARSHANCHAUDHARI",
         "url": "https://github.com/SUDARSHANCHAUDHARI"

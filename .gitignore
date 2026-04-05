@@ -10,7 +10,7 @@
 *.swo
 
 # Claude Code
-.claude/settings.local.json
+.claude/
 .playwright-mcp/
 
 # Output (generated privacy policies should live in their own repos)

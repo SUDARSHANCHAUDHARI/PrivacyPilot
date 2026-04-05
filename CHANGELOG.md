@@ -18,7 +18,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `policy-writer` agent — generates clean, mobile-friendly, self-contained HTML
 - `permission-data-map` skill — complete Android permission → data type mapping table
 - `sdk-disclosure-rules` skill — rules for disclosing third-party SDK data collection
-- `github-pages-deploy` skill — GitHub Pages deployment pattern for SudarshanTechLabs apps
+- `github-pages-deploy` skill — GitHub Pages deployment pattern for any Android developer
 - `gdpr-compliance` skill — GDPR, CCPA, and COPPA requirements reference
 - `play-data-safety` skill — Play Console Data Safety form completion guide
 - HTML template with `{{PLACEHOLDER}}` tokens for policy generation

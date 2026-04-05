@@ -228,4 +228,4 @@ SudarshanTechLabs | sudarshantechlabs@gmail.com
 
 ## License
 
-MIT — see [LICENSE](../LICENSE)
+MIT — see [LICENSE](https://github.com/SUDARSHANCHAUDHARI/PrivacyPilot/blob/main/LICENSE)

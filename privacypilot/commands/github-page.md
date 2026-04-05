@@ -3,16 +3,16 @@ Deploy the generated privacy policy to GitHub Pages.
 ## Steps
 
 1. Ask for:
-   - GitHub username (default: SUDARSHANCHAUDHARI)
-   - App name (e.g. MyFamilyTracker)
+   - GitHub username
+   - App name (e.g. MyApp)
    - Confirm the target repo name: `[appname-lowercase]-privacy-policy`
 
 2. Show the deployment plan:
    ```
    DEPLOYMENT PLAN
    ────────────────
-   Repo to create/update: SUDARSHANCHAUDHARI/[appname-lowercase]-privacy-policy
-   GitHub Pages URL: https://sudarshanchaudhari.github.io/[appname-lowercase]-privacy-policy/
+   Repo to create/update: [github-username]/[appname-lowercase]-privacy-policy
+   GitHub Pages URL: https://[github-username].github.io/[appname-lowercase]-privacy-policy/
    Branch: main
    File: index.html
    ```
@@ -23,11 +23,11 @@ Deploy the generated privacy policy to GitHub Pages.
    ```bash
    # Navigate to privacy-policy folder
    cd privacy-policy
-   
+
    # Initialize git if not already done
    git init
-   git remote add origin https://github.com/SUDARSHANCHAUDHARI/[appname-lowercase]-privacy-policy.git
-   
+   git remote add origin https://github.com/[github-username]/[appname-lowercase]-privacy-policy.git
+
    # Add, commit, push
    git add index.html
    git commit -m "Update privacy policy — $(date +%Y-%m-%d)"

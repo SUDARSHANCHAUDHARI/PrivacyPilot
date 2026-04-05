@@ -1,17 +1,17 @@
 ---
 name: github-pages-deploy
-description: Deploying privacy policy HTML to GitHub Pages for SudarshanTechLabs apps
+description: Deploying privacy policy HTML to GitHub Pages for Android apps
 trigger: when deploying or updating a privacy policy to GitHub Pages
 ---
 
 ## GitHub Pages Deployment Pattern
 
-### URL convention (SudarshanTechLabs)
-`https://sudarshanchaudhari.github.io/[appname-lowercase]-privacy-policy/`
+### URL convention
+`https://[github-username].github.io/[appname-lowercase]-privacy-policy/`
 
 Examples:
-- MyFamilyTracker → `https://sudarshanchaudhari.github.io/myfamilytracker-privacy-policy/`
-- BatteryGuard → `https://sudarshanchaudhari.github.io/batteryguard-privacy-policy/`
+- Username `johndoe`, app `MyFamilyTracker` → `https://johndoe.github.io/myfamilytracker-privacy-policy/`
+- Username `acmecorp`, app `BatteryGuard` → `https://acmecorp.github.io/batteryguard-privacy-policy/`
 
 ### Repository naming
 `[appname-lowercase]-privacy-policy`
@@ -19,7 +19,7 @@ Examples:
 Example: `myfamilytracker-privacy-policy`
 
 ### One-time setup per app
-1. Create repo on GitHub: `SUDARSHANCHAUDHARI/[appname-lowercase]-privacy-policy`
+1. Create repo on GitHub: `[github-username]/[appname-lowercase]-privacy-policy`
 2. Push `index.html` to main branch
 3. Enable GitHub Pages: repo Settings → Pages → Source: main branch / root
 4. URL goes live in 1–2 minutes
@@ -34,7 +34,7 @@ git push origin main
 
 ### Verify deployment
 After push, check:
-`https://sudarshanchaudhari.github.io/[appname-lowercase]-privacy-policy/`
+`https://[github-username].github.io/[appname-lowercase]-privacy-policy/`
 
 If 404, check GitHub Pages is enabled in repo Settings.
 
@@ -48,4 +48,4 @@ The entire privacy policy should be one self-contained `index.html`:
 
 ### Play Console URL field
 In Play Console → Store Presence → Store Settings → Privacy policy:
-Enter: `https://sudarshanchaudhari.github.io/[appname-lowercase]-privacy-policy/`
+Enter: `https://[github-username].github.io/[appname-lowercase]-privacy-policy/`

@@ -6,10 +6,11 @@ Generate a complete privacy policy for an Android app by scanning its manifest a
    - Path to `AndroidManifest.xml` (default: `app/src/main/AndroidManifest.xml`)
    - Path to `app/build.gradle.kts` or `build.gradle`
    - App name (display name)
-   - Package name (e.g. com.sudarshantechlabs.myapp)
-   - Developer/company name (default: SudarshanTechLabs)
-   - Contact email (default: sudarshantechlabs@gmail.com)
-   - Developer country (default: Thailand)
+   - Package name (e.g. com.example.myapp)
+   - Developer / company name
+   - Contact email
+   - Developer country
+   - GitHub username (used for the GitHub Pages URL)
 
 2. Spawn manifest-reader agent to parse AndroidManifest.xml:
    - Extract all `<uses-permission>` tags
@@ -38,9 +39,9 @@ Generate a complete privacy policy for an Android app by scanning its manifest a
    SDKs detected: [list]
    Data collected: [list]
    Third-party sharing: [list]
-   
+
    File saved: privacy-policy/index.html
-   Privacy policy URL: https://sudarshanchaudhari.github.io/[appname]-privacy-policy/
-   
+   Privacy policy URL: https://[github-username].github.io/[appname-lowercase]-privacy-policy/
+
    Next: Run /privacypilot:github-page to deploy
    ```

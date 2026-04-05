@@ -1,27 +1,13 @@
 {
   "name": "privacypilot",
-  "version": "1.0.0",
   "description": "Automatically generate Play Store-compliant privacy policies from AndroidManifest.xml and Gradle dependencies. Deploys to GitHub Pages.",
-  "author": "SUDARSHANCHAUDHARI",
+  "version": "1.0.0",
+  "author": {
+    "name": "SUDARSHANCHAUDHARI",
+    "url": "https://github.com/SUDARSHANCHAUDHARI"
+  },
   "homepage": "https://github.com/SUDARSHANCHAUDHARI/privacypilot-claude-plugin-privacy-policy",
+  "repository": "https://github.com/SUDARSHANCHAUDHARI/privacypilot-claude-plugin-privacy-policy",
   "license": "MIT",
-  "commands": [
-    { "name": "generate",    "file": "commands/generate.md" },
-    { "name": "audit",       "file": "commands/audit.md" },
-    { "name": "github-page", "file": "commands/github-page.md" },
-    { "name": "update",      "file": "commands/update.md" }
-  ],
-  "agents": [
-    { "name": "manifest-reader", "file": "agents/manifest-reader.md" },
-    { "name": "sdk-detector",    "file": "agents/sdk-detector.md" },
-    { "name": "policy-writer",   "file": "agents/policy-writer.md" }
-  ],
-  "skills": [
-    "skills/permission-data-map.md",
-    "skills/sdk-disclosure-rules.md",
-    "skills/github-pages-deploy.md",
-    "skills/gdpr-compliance.md",
-    "skills/play-data-safety.md"
-  ],
   "keywords": ["android", "privacy-policy", "gdpr", "google-play", "github-pages", "compliance"]
 }

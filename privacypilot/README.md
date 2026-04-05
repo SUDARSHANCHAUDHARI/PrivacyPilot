@@ -66,7 +66,7 @@ Data collected: Advertising ID, device info, crash logs, app usage
 Third-party sharing: Google
 
 File saved: privacy-policy/index.html
-Privacy policy URL: https://sudarshanchaudhari.github.io/myapp-privacy-policy/
+Privacy policy URL: https://[your-github-username].github.io/myapp-privacy-policy/
 
 Next: Run /privacypilot:github-page to deploy
 ```
@@ -160,9 +160,9 @@ PrivacyPilot follows this URL pattern:
 https://[github-username].github.io/[appname-lowercase]-privacy-policy/
 ```
 
-Examples:
-- `MyFamilyTracker` → `https://sudarshanchaudhari.github.io/myfamilytracker-privacy-policy/`
-- `BatteryGuard` → `https://sudarshanchaudhari.github.io/batteryguard-privacy-policy/`
+Examples (replace `johndoe` with your GitHub username):
+- `MyFamilyTracker` → `https://johndoe.github.io/myfamilytracker-privacy-policy/`
+- `BatteryGuard` → `https://johndoe.github.io/batteryguard-privacy-policy/`
 
 This URL goes directly into Play Console → Store Presence → Store Settings → Privacy Policy.
 

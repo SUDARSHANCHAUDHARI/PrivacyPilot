@@ -9,11 +9,11 @@ Run one-time setup for PrivacyPilot. Saves your developer config to .claude-plug
 2. Ask user these questions one by one:
 
    **Developer info**
-   - Your full name or developer display name: (e.g. Jane Smith)
-   - Company / developer label: (e.g. AcmeDev)
-   - Contact email (shown in privacy policy): (e.g. hello@acmedev.com)
-   - GitHub username: (e.g. acmedev)
-   - Country: (e.g. United States)
+   - Your full name or developer display name: (e.g. Your Name)
+   - Company / developer label: (e.g. YourCompany)
+   - Contact email (shown in privacy policy): (e.g. you@example.com)
+   - GitHub username: (e.g. your-github-username)
+   - Country: (e.g. Your Country)
 
    **GitHub Pages**
    - Privacy policy URL pattern:

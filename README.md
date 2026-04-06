@@ -169,9 +169,9 @@ PrivacyPilot follows this URL pattern:
 https://[github-username].github.io/[appname-lowercase]-privacy-policy/
 ```
 
-Examples (replace `johndoe` with your GitHub username):
-- `MyFamilyTracker` → `https://johndoe.github.io/myfamilytracker-privacy-policy/`
-- `BatteryGuard` → `https://johndoe.github.io/batteryguard-privacy-policy/`
+Examples (replace `your-username` with your GitHub username):
+- `MyFamilyTracker` → `https://your-username.github.io/myfamilytracker-privacy-policy/`
+- `BatteryGuard` → `https://your-username.github.io/batteryguard-privacy-policy/`
 
 This URL goes directly into Play Console → Store Presence → Store Settings → Privacy Policy.
 

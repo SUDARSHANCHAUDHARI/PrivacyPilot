@@ -38,8 +38,7 @@ PrivacyPilot solves this by reading your actual project files and generating a p
 ## Install
 
 ```bash
-/plugin marketplace add SUDARSHANCHAUDHARI/PrivacyPilot
-/plugin install privacypilot@privacypilot
+/plugin install privacypilot
 ```
 
 **First-time configuration:** When you enable the plugin, Claude Code automatically prompts you for your developer details:

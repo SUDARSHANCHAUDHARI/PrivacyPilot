@@ -21,7 +21,7 @@ Play Console → App → Policy → Data Safety
 **Can users request data deletion?**
 - Must provide a way — either in-app or via email
 - Link in Play Console to your deletion request method
-- Acceptable: "Email {config.developer.email} to request data deletion"
+- Acceptable: "Email ${user_config.email} to request data deletion"
 
 ### Data type checklist
 

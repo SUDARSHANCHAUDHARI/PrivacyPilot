@@ -9,5 +9,27 @@
   "homepage": "https://github.com/SUDARSHANCHAUDHARI/privacypilot-claude-plugin-privacy-policy",
   "repository": "https://github.com/SUDARSHANCHAUDHARI/privacypilot-claude-plugin-privacy-policy",
   "license": "MIT",
-  "keywords": ["android", "privacy-policy", "gdpr", "google-play", "github-pages", "compliance"]
+  "keywords": ["android", "privacy-policy", "gdpr", "google-play", "github-pages", "compliance"],
+  "userConfig": {
+    "developer_name": {
+      "description": "Your full name or developer display name (e.g. Your Name)",
+      "sensitive": false
+    },
+    "company": {
+      "description": "Company / developer label (e.g. YourCompany)",
+      "sensitive": false
+    },
+    "email": {
+      "description": "Contact email shown in the privacy policy (e.g. you@example.com)",
+      "sensitive": false
+    },
+    "github_username": {
+      "description": "GitHub username for GitHub Pages deployment (e.g. your-username)",
+      "sensitive": false
+    },
+    "country": {
+      "description": "Country where you are based (e.g. United States)",
+      "sensitive": false
+    }
+  }
 }

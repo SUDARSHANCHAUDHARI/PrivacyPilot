@@ -6,40 +6,49 @@ Deploy the generated privacy policy to GitHub Pages.
    - App name (e.g. YourApp)
    - Confirm the target repo name: `[appname-lowercase]-privacy-policy`
 
-2. Show the deployment plan:
+2. Check that `privacy-policy/index.html` exists in the current project. If not, stop and tell the user to run `/privacypilot:generate` first.
+
+3. Show the deployment plan:
    ```
    DEPLOYMENT PLAN
    ────────────────
-   Repo to create/update: ${user_config.github_username}/[appname-lowercase]-privacy-policy
+   Repo: ${user_config.github_username}/[appname-lowercase]-privacy-policy
    GitHub Pages URL: https://${user_config.github_username}.github.io/[appname-lowercase]-privacy-policy/
    Branch: main
    File: index.html
    ```
 
-3. Ask for explicit confirmation before any git operations
+4. Remind the user to create the GitHub repo first if it doesn't exist:
+   - Go to github.com/new
+   - Name: `[appname-lowercase]-privacy-policy`
+   - Set to Public (required for GitHub Pages)
+   - Do NOT initialise with README
 
-4. After confirmation, run these commands:
+5. Ask for explicit confirmation before any git operations.
+
+6. After confirmation, run these commands:
    ```bash
-   # Navigate to privacy-policy folder
    cd privacy-policy
 
-   # Initialize git if not already done
-   git init
-   git remote add origin https://github.com/${user_config.github_username}/[appname-lowercase]-privacy-policy.git
+   # Initialise git only if not already a git repo
+   git rev-parse --git-dir > /dev/null 2>&1 || git init
 
-   # Add, commit, push
+   # Set remote — update if it already exists
+   git remote get-url origin > /dev/null 2>&1 \
+     && git remote set-url origin https://github.com/${user_config.github_username}/[appname-lowercase]-privacy-policy.git \
+     || git remote add origin https://github.com/${user_config.github_username}/[appname-lowercase]-privacy-policy.git
+
    git add index.html
    git commit -m "Update privacy policy — $(date +%Y-%m-%d)"
    git push -u origin main
    ```
 
-5. Remind user to enable GitHub Pages in repo settings:
-   - Settings → Pages → Source: Deploy from branch → main → / (root)
-   - It takes 1–2 minutes for the URL to go live
+7. After push, remind the user to enable GitHub Pages if this is the first deployment:
+   - Repo Settings → Pages → Source: Deploy from branch → main → / (root) → Save
+   - URL goes live in 1–2 minutes
 
-6. Verify the URL is accessible after deployment
+8. Verify the URL is accessible:
+   `https://${user_config.github_username}.github.io/[appname-lowercase]-privacy-policy/`
 
-7. Remind user to add this URL to:
-   - Play Console → Store Presence → Store settings → Privacy policy URL
-   - The app itself (Settings screen or About screen)
-   - AndroidManifest meta-data if declared
+9. Remind the user to add this URL to Play Console:
+   `Store Presence → Store Settings → Privacy policy URL`

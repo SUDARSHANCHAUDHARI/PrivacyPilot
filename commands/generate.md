@@ -41,5 +41,5 @@ Generate a complete privacy policy for an Android app by scanning its manifest a
    File saved: privacy-policy/index.html
    Privacy policy URL: https://${user_config.github_username}.github.io/[appname-lowercase]-privacy-policy/
 
-   Next: Run /privacypilot:github-page to deploy
+   Next: Run /privacypilot:github-page to deploy to GitHub Pages
    ```

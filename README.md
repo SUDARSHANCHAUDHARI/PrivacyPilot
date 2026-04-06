@@ -27,7 +27,7 @@ Android developers are required to provide a privacy policy on Google Play. Writ
 
 ```bash
 /plugin marketplace add SUDARSHANCHAUDHARI/PrivacyPilot
-/plugin install privacypilot
+/plugin install privacypilot@privacypilot
 ```
 
 ---
@@ -136,7 +136,7 @@ Diffs your current manifest and Gradle against the existing policy and shows exa
 | `RECORD_AUDIO` | Audio / voice |
 | `SEND_SMS` / `READ_SMS` | SMS messages |
 | `READ_EXTERNAL_STORAGE` | Files, photos, documents |
-| + more | See `skills/permission-data-map.md` |
+| + more | See `skills/permission-data-map/SKILL.md` |
 
 ### Third-Party SDKs
 | SDK | Data Collected |
@@ -147,7 +147,7 @@ Diffs your current manifest and Gradle against the existing policy and shows exa
 | Firebase Auth | Email, phone, auth tokens |
 | Facebook Audience Network | Device info, location, app activity |
 | Adjust / AppsFlyer | Install referrer, events, device ID |
-| + more | See `skills/sdk-disclosure-rules.md` |
+| + more | See `skills/sdk-disclosure-rules/SKILL.md` |
 
 ---
 

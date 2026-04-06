@@ -5,7 +5,7 @@
   },
   "owner": {
     "name": "SUDARSHANCHAUDHARI",
-    "url": "https://github.com/SUDARSHANCHAUDHARI"
+    "email": "sudarshantechlabs@gmail.com"
   },
   "plugins": [
     {
@@ -13,10 +13,15 @@
       "description": "Automatically generate Play Store-compliant privacy policies from AndroidManifest.xml and Gradle dependencies. Deploys to GitHub Pages.",
       "version": "1.0.0",
       "source": "./",
+      "category": "android",
       "author": {
         "name": "SUDARSHANCHAUDHARI",
-        "url": "https://github.com/SUDARSHANCHAUDHARI"
-      }
+        "email": "sudarshantechlabs@gmail.com"
+      },
+      "homepage": "https://github.com/SUDARSHANCHAUDHARI/privacypilot-claude-plugin-privacy-policy",
+      "repository": "https://github.com/SUDARSHANCHAUDHARI/privacypilot-claude-plugin-privacy-policy",
+      "license": "MIT",
+      "keywords": ["android", "privacy-policy", "gdpr", "google-play", "github-pages", "compliance", "play-store"]
     }
   ]
 }

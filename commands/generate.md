@@ -1,10 +1,5 @@
 Generate a complete privacy policy for an Android app by scanning its manifest and dependencies.
 
-## Config check
-Read `.claude-plugin-config.json` from the current project directory.
-- Found → load silently, use `{config.*}` values throughout
-- Not found → stop and say: "Run /privacypilot:setup first to configure your developer details."
-
 ## Steps
 
 1. Ask for:
@@ -12,9 +7,9 @@ Read `.claude-plugin-config.json` from the current project directory.
    - Path to `app/build.gradle.kts` or `build.gradle`
    - App name (display name)
    - Package name (e.g. com.example.yourapp)
-   - Developer/company name (default: {config.developer.company})
-   - Contact email (default: {config.developer.email})
-   - Developer country (default: {config.developer.country})
+   - Developer/company name (default: ${user_config.company})
+   - Contact email (default: ${user_config.email})
+   - Developer country (default: ${user_config.country})
 
 2. Spawn manifest-reader agent to parse AndroidManifest.xml:
    - Extract all `<uses-permission>` tags
@@ -45,7 +40,7 @@ Read `.claude-plugin-config.json` from the current project directory.
    Third-party sharing: [list]
 
    File saved: privacy-policy/index.html
-   Privacy policy URL: https://{config.developer.github_username}.github.io/[appname-lowercase]-privacy-policy/
+   Privacy policy URL: https://${user_config.github_username}.github.io/[appname-lowercase]-privacy-policy/
 
    Next: Run /privacypilot:github-page to deploy
    ```

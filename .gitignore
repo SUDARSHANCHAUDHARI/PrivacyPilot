@@ -16,8 +16,5 @@
 # Local planning/spec files
 PLUGIN_3_PRIVACY_POLICY_GENERATOR.md
 
-# PrivacyPilot per-project config (contains developer personal info)
-.claude-plugin-config.json
-
 # Output (generated privacy policies should live in their own repos)
 privacy-policy/

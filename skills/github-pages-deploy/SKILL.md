@@ -6,7 +6,7 @@ description: Deploying privacy policy HTML to GitHub Pages for Android apps. Use
 ## GitHub Pages Deployment Pattern
 
 ### URL convention
-`https://{config.developer.github_username}.github.io/[appname-lowercase]-privacy-policy/`
+`https://${user_config.github_username}.github.io/[appname-lowercase]-privacy-policy/`
 
 Example:
 - App `YourAppName` → `https://your-username.github.io/yourappname-privacy-policy/`
@@ -17,7 +17,7 @@ Example:
 Example: `yourapp-privacy-policy`
 
 ### One-time setup per app
-1. Create repo on GitHub: `{config.developer.github_username}/[appname-lowercase]-privacy-policy`
+1. Create repo on GitHub: `${user_config.github_username}/[appname-lowercase]-privacy-policy`
 2. Push `index.html` to main branch
 3. Enable GitHub Pages: repo Settings → Pages → Source: main branch / root
 4. URL goes live in 1–2 minutes
@@ -32,7 +32,7 @@ git push origin main
 
 ### Verify deployment
 After push, check:
-`https://{config.developer.github_username}.github.io/[appname-lowercase]-privacy-policy/`
+`https://${user_config.github_username}.github.io/[appname-lowercase]-privacy-policy/`
 
 If 404, check GitHub Pages is enabled in repo Settings.
 
@@ -46,4 +46,4 @@ The entire privacy policy should be one self-contained `index.html`:
 
 ### Play Console URL field
 In Play Console → Store Presence → Store Settings → Privacy policy:
-Enter: `https://{config.developer.github_username}.github.io/[appname-lowercase]-privacy-policy/`
+Enter: `https://${user_config.github_username}.github.io/[appname-lowercase]-privacy-policy/`

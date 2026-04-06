@@ -1,10 +1,5 @@
 Deploy the generated privacy policy to GitHub Pages.
 
-## Config check
-Read `.claude-plugin-config.json` from the current project directory.
-- Found → load silently, use `{config.*}` values throughout
-- Not found → stop and say: "Run /privacypilot:setup first to configure your developer details."
-
 ## Steps
 
 1. Ask for:
@@ -15,8 +10,8 @@ Read `.claude-plugin-config.json` from the current project directory.
    ```
    DEPLOYMENT PLAN
    ────────────────
-   Repo to create/update: {config.developer.github_username}/[appname-lowercase]-privacy-policy
-   GitHub Pages URL: https://{config.developer.github_username}.github.io/[appname-lowercase]-privacy-policy/
+   Repo to create/update: ${user_config.github_username}/[appname-lowercase]-privacy-policy
+   GitHub Pages URL: https://${user_config.github_username}.github.io/[appname-lowercase]-privacy-policy/
    Branch: main
    File: index.html
    ```
@@ -30,7 +25,7 @@ Read `.claude-plugin-config.json` from the current project directory.
 
    # Initialize git if not already done
    git init
-   git remote add origin https://github.com/{config.developer.github_username}/[appname-lowercase]-privacy-policy.git
+   git remote add origin https://github.com/${user_config.github_username}/[appname-lowercase]-privacy-policy.git
 
    # Add, commit, push
    git add index.html

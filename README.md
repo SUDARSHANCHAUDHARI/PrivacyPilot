@@ -201,11 +201,16 @@ PrivacyPilot/                        # repo root = plugin root
 │   ├── sdk-detector.md              # Detects third-party SDKs in Gradle
 │   └── policy-writer.md             # Generates HTML privacy policy
 ├── skills/
-│   ├── permission-data-map.md       # Permission → data type mapping
-│   ├── sdk-disclosure-rules.md      # SDK disclosure requirements
-│   ├── github-pages-deploy.md       # GitHub Pages deployment guide
-│   ├── gdpr-compliance.md           # GDPR requirements reference
-│   └── play-data-safety.md          # Play Console Data Safety guide
+│   ├── permission-data-map/
+│   │   └── SKILL.md                 # Permission → data type mapping
+│   ├── sdk-disclosure-rules/
+│   │   └── SKILL.md                 # SDK disclosure requirements
+│   ├── github-pages-deploy/
+│   │   └── SKILL.md                 # GitHub Pages deployment guide
+│   ├── gdpr-compliance/
+│   │   └── SKILL.md                 # GDPR requirements reference
+│   └── play-data-safety/
+│       └── SKILL.md                 # Play Console Data Safety guide
 ├── templates/
 │   └── privacy-policy-template.html
 ├── README.md

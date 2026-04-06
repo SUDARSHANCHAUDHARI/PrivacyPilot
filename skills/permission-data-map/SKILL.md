@@ -1,7 +1,6 @@
 ---
 name: permission-data-map
-description: Complete mapping of Android permissions to data types collected
-trigger: when reading AndroidManifest.xml or generating a privacy policy
+description: Complete mapping of Android permissions to data types collected. Use when reading AndroidManifest.xml, generating a privacy policy, or determining what data a permission collects.
 ---
 
 ## Android Permission → Data Collection Mapping

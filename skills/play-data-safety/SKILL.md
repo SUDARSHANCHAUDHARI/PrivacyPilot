@@ -1,7 +1,6 @@
 ---
 name: play-data-safety
-description: How to complete the Play Console Data Safety form accurately
-trigger: when filling out the Data Safety section in Play Console
+description: How to complete the Play Console Data Safety form accurately. Use when filling out the Data Safety section in Play Console or verifying that a privacy policy matches the Data Safety declaration.
 ---
 
 ## Play Console Data Safety Form

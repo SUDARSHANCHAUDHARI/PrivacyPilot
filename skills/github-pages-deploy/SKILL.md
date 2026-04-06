@@ -1,7 +1,6 @@
 ---
 name: github-pages-deploy
-description: Deploying privacy policy HTML to GitHub Pages for Android apps
-trigger: when deploying or updating a privacy policy to GitHub Pages
+description: Deploying privacy policy HTML to GitHub Pages for Android apps. Use when deploying or updating a privacy policy to GitHub Pages, or explaining the deployment workflow.
 ---
 
 ## GitHub Pages Deployment Pattern

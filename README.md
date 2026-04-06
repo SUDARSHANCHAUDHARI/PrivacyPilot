@@ -36,6 +36,7 @@ Android developers are required to provide a privacy policy on Google Play. Writ
 
 | Command | Description |
 |---|---|
+| `/privacypilot:setup` | One-time setup — saves your developer details to the project |
 | `/privacypilot:generate` | Scan manifest + Gradle and generate a complete privacy policy HTML |
 | `/privacypilot:audit` | Audit an existing policy for compliance gaps |
 | `/privacypilot:github-page` | Deploy the generated policy to GitHub Pages |
@@ -45,7 +46,15 @@ Android developers are required to provide a privacy policy on Google Play. Writ
 
 ## Quick Start
 
-### Generate a policy from scratch
+### 1. Run setup once per project
+
+```
+/privacypilot:setup
+```
+
+Saves your name, email, GitHub username, and country to `.claude-plugin-config.json`. All other commands load this automatically — you'll never be asked for your details again.
+
+### 2. Generate a policy
 
 ```
 /privacypilot:generate
@@ -54,7 +63,7 @@ Android developers are required to provide a privacy policy on Google Play. Writ
 You will be asked for:
 - Path to `AndroidManifest.xml` (default: `app/src/main/AndroidManifest.xml`)
 - Path to `build.gradle.kts` or `build.gradle`
-- App name, package name, contact email
+- App name and package name
 
 Output:
 ```

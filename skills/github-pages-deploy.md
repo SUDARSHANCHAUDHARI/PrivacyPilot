@@ -7,11 +7,11 @@ trigger: when deploying or updating a privacy policy to GitHub Pages
 ## GitHub Pages Deployment Pattern
 
 ### URL convention
-`https://[github-username].github.io/[appname-lowercase]-privacy-policy/`
+`https://{config.developer.github_username}.github.io/[appname-lowercase]-privacy-policy/`
 
-Examples:
-- Username `johndoe`, app `MyFamilyTracker` → `https://johndoe.github.io/myfamilytracker-privacy-policy/`
-- Username `acmecorp`, app `BatteryGuard` → `https://acmecorp.github.io/batteryguard-privacy-policy/`
+Examples (replace `johndoe` with your GitHub username):
+- App `MyFamilyTracker` → `https://johndoe.github.io/myfamilytracker-privacy-policy/`
+- App `BatteryGuard` → `https://johndoe.github.io/batteryguard-privacy-policy/`
 
 ### Repository naming
 `[appname-lowercase]-privacy-policy`
@@ -19,7 +19,7 @@ Examples:
 Example: `myfamilytracker-privacy-policy`
 
 ### One-time setup per app
-1. Create repo on GitHub: `[github-username]/[appname-lowercase]-privacy-policy`
+1. Create repo on GitHub: `{config.developer.github_username}/[appname-lowercase]-privacy-policy`
 2. Push `index.html` to main branch
 3. Enable GitHub Pages: repo Settings → Pages → Source: main branch / root
 4. URL goes live in 1–2 minutes
@@ -34,7 +34,7 @@ git push origin main
 
 ### Verify deployment
 After push, check:
-`https://[github-username].github.io/[appname-lowercase]-privacy-policy/`
+`https://{config.developer.github_username}.github.io/[appname-lowercase]-privacy-policy/`
 
 If 404, check GitHub Pages is enabled in repo Settings.
 
@@ -48,4 +48,4 @@ The entire privacy policy should be one self-contained `index.html`:
 
 ### Play Console URL field
 In Play Console → Store Presence → Store Settings → Privacy policy:
-Enter: `https://[github-username].github.io/[appname-lowercase]-privacy-policy/`
+Enter: `https://{config.developer.github_username}.github.io/[appname-lowercase]-privacy-policy/`

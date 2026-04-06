@@ -12,9 +12,9 @@ GDPR applies if your app is distributed to users in the European Union, regardle
 ### Required elements in GDPR-compliant privacy policy
 
 **Data controller identity**
-- Name / company name: [developer or company name]
-- Contact: [developer contact email]
-- Country: [developer country]
+- Name / company name: {config.developer.company}
+- Contact: {config.developer.email}
+- Country: {config.developer.country}
 
 **Legal basis for processing**
 Choose the correct basis for each data type:
@@ -38,7 +38,7 @@ If using Firebase/AdMob: mention that data may be transferred to the US (Google'
 Specify how long each data type is retained.
 
 ### GDPR-required language
-"Residents of the European Economic Area (EEA) have additional rights under the General Data Protection Regulation (GDPR). You may contact us at [contact-email] to exercise your rights of access, correction, deletion, or portability."
+"Residents of the European Economic Area (EEA) have additional rights under the General Data Protection Regulation (GDPR). You may contact us at {config.developer.email} to exercise your rights of access, correction, deletion, or portability."
 
 ### CCPA (California)
 For California users:

@@ -139,6 +139,12 @@ SudarshanTechLabs | sudarshantechlabs@gmail.com
 
 ---
 
+## Documentation
+
+For full details — all detected permissions, all SDKs, compliance coverage, GitHub Pages setup guide, and plugin architecture — see [DOCUMENTATION.md](DOCUMENTATION.md).
+
+---
+
 ## License
 
 MIT — see [LICENSE](LICENSE)

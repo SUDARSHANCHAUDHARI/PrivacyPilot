@@ -35,14 +35,21 @@ Read all `<uses-permission>` tags and categorize:
 - CALL_PHONE — make calls
 - READ_CALL_LOG — read call history
 
+**Biometric & Security**
+- USE_BIOMETRIC — biometric authentication (fingerprint, face)
+- USE_FINGERPRINT — fingerprint data (legacy)
+
+**Notifications**
+- POST_NOTIFICATIONS — send notifications to user (Android 13+, not data collection)
+
 **Network & Device**
 - INTERNET — internet access (required by most apps)
 - ACCESS_WIFI_STATE — WiFi network info
-- BLUETOOTH — Bluetooth access
+- BLUETOOTH / BLUETOOTH_CONNECT / BLUETOOTH_SCAN — Bluetooth access
 - NFC — NFC access
 - VIBRATE — vibration (not data-sensitive)
 - RECEIVE_BOOT_COMPLETED — start on boot
-- USE_BIOMETRIC / USE_FINGERPRINT — biometric data
+- FOREGROUND_SERVICE — run foreground service (not data collection)
 
 ## Output format
 ```

@@ -75,7 +75,7 @@ Data collected: Advertising ID, device info, crash logs, app usage
 Third-party sharing: Google
 
 File saved: privacy-policy/index.html
-Privacy policy URL: https://[your-github-username].github.io/myapp-privacy-policy/
+Privacy policy URL: https://[your-github-username].github.io/yourapp-privacy-policy/
 
 Next: Run /privacypilot:github-page to deploy
 ```
@@ -99,7 +99,7 @@ Output example:
 ```
 PRIVACY POLICY AUDIT
 ─────────────────────
-App: MyApp
+App: YourApp
 
 GAPS FOUND:
 ✗ AdMob detected in build.gradle but not disclosed in policy
@@ -169,9 +169,8 @@ PrivacyPilot follows this URL pattern:
 https://[github-username].github.io/[appname-lowercase]-privacy-policy/
 ```
 
-Examples (replace `your-username` with your GitHub username):
-- `MyFamilyTracker` → `https://your-username.github.io/myfamilytracker-privacy-policy/`
-- `BatteryGuard` → `https://your-username.github.io/batteryguard-privacy-policy/`
+Example:
+- App `YourAppName` → `https://your-username.github.io/yourappname-privacy-policy/`
 
 This URL goes directly into Play Console → Store Presence → Store Settings → Privacy Policy.
 

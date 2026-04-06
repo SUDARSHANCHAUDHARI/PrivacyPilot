@@ -9,14 +9,13 @@ trigger: when deploying or updating a privacy policy to GitHub Pages
 ### URL convention
 `https://{config.developer.github_username}.github.io/[appname-lowercase]-privacy-policy/`
 
-Examples (replace `your-username` with your GitHub username):
-- App `MyFamilyTracker` → `https://your-username.github.io/myfamilytracker-privacy-policy/`
-- App `BatteryGuard` → `https://your-username.github.io/batteryguard-privacy-policy/`
+Example:
+- App `YourAppName` → `https://your-username.github.io/yourappname-privacy-policy/`
 
 ### Repository naming
 `[appname-lowercase]-privacy-policy`
 
-Example: `myfamilytracker-privacy-policy`
+Example: `yourapp-privacy-policy`
 
 ### One-time setup per app
 1. Create repo on GitHub: `{config.developer.github_username}/[appname-lowercase]-privacy-policy`

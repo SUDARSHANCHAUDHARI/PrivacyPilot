@@ -8,7 +8,7 @@ Read `.claude-plugin-config.json` from the current project directory.
 ## Steps
 
 1. Ask for:
-   - App name (e.g. MyApp)
+   - App name (e.g. YourApp)
    - Confirm the target repo name: `[appname-lowercase]-privacy-policy`
 
 2. Show the deployment plan:

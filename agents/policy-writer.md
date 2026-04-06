@@ -29,7 +29,7 @@ A complete HTML privacy policy covering:
 10. **Contact us** — developer contact info
 
 ## Output file
-Always save the generated policy to `privacy-policy/index.html` inside the current Android project directory — never to any other location or repo.
+Use the Write tool to save the generated policy to the exact path provided by the generate command (e.g. `[project-dir]/privacy-policy/index.html`). Never save to any other location or repo. If no path is provided, ask for it before generating.
 
 ## HTML template structure
 Generate clean, mobile-friendly HTML that:

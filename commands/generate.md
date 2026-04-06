@@ -11,7 +11,7 @@ Read `.claude-plugin-config.json` from the current project directory.
    - Path to `AndroidManifest.xml` (default: `app/src/main/AndroidManifest.xml`)
    - Path to `app/build.gradle.kts` or `build.gradle`
    - App name (display name)
-   - Package name (e.g. com.example.myapp)
+   - Package name (e.g. com.example.yourapp)
    - Developer/company name (default: {config.developer.company})
    - Contact email (default: {config.developer.email})
    - Developer country (default: {config.developer.country})

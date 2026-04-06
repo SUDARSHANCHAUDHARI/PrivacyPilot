@@ -12,22 +12,32 @@
   "keywords": ["android", "privacy-policy", "gdpr", "google-play", "github-pages", "compliance"],
   "userConfig": {
     "developer_name": {
+      "title": "Developer Name",
+      "type": "string",
       "description": "Your full name or developer display name (e.g. Your Name)",
       "sensitive": false
     },
     "company": {
+      "title": "Company",
+      "type": "string",
       "description": "Company / developer label (e.g. YourCompany)",
       "sensitive": false
     },
     "email": {
+      "title": "Contact Email",
+      "type": "string",
       "description": "Contact email shown in the privacy policy (e.g. you@example.com)",
       "sensitive": false
     },
     "github_username": {
+      "title": "GitHub Username",
+      "type": "string",
       "description": "GitHub username for GitHub Pages deployment (e.g. your-username)",
       "sensitive": false
     },
     "country": {
+      "title": "Country",
+      "type": "string",
       "description": "Country where you are based (e.g. United States)",
       "sensitive": false
     }

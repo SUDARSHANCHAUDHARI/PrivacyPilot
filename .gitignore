@@ -13,5 +13,8 @@
 .claude/
 .playwright-mcp/
 
+# PrivacyPilot per-project config (contains developer personal info)
+.claude-plugin-config.json
+
 # Output (generated privacy policies should live in their own repos)
 privacy-policy/

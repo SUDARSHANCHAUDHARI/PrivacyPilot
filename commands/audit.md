@@ -1,5 +1,10 @@
 Audit an Android app's manifest and existing privacy policy for compliance gaps.
 
+## Config check
+Read `.claude-plugin-config.json` from the current project directory.
+- Found → load silently, use `{config.*}` values throughout
+- Not found → stop and say: "Run /privacypilot:setup first to configure your developer details."
+
 ## Steps
 
 1. Ask for:
@@ -30,16 +35,16 @@ Audit an Android app's manifest and existing privacy policy for compliance gaps.
    PRIVACY POLICY AUDIT
    ─────────────────────
    App: [name]
-   
+
    GAPS FOUND:
    ✗ [issue] — [how to fix]
-   
+
    WARNINGS:
    ⚠ [warning] — [recommendation]
-   
+
    COMPLIANT:
    ✓ [items that are correctly disclosed]
-   
+
    VERDICT: [Compliant / Needs Update / Significant Gaps]
    ```
 

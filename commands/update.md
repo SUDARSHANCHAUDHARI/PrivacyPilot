@@ -1,5 +1,10 @@
 Update an existing privacy policy when app permissions or SDKs change.
 
+## Config check
+Read `.claude-plugin-config.json` from the current project directory.
+- Found → load silently, use `{config.*}` values throughout
+- Not found → stop and say: "Run /privacypilot:setup first to configure your developer details."
+
 ## Steps
 
 1. Ask for:
@@ -23,10 +28,10 @@ Update an existing privacy policy when app permissions or SDKs change.
    ADD these sections:
    - Camera permission disclosure (new in this version)
    - AdMob integration (newly added SDK)
-   
+
    UPDATE these sections:
    - Data retention: update to reflect new 90-day limit
-   
+
    REMOVE these sections:
    - Location permission (removed from manifest)
    ```

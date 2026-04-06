@@ -1,7 +1,6 @@
 ---
 name: sdk-disclosure-rules
-description: Rules for disclosing third-party SDK data collection in privacy policies
-trigger: when generating a privacy policy or auditing data disclosure
+description: Rules for disclosing third-party SDK data collection in privacy policies. Use when generating a privacy policy, auditing data disclosure, or determining what SDK data must be declared.
 ---
 
 ## Third-Party SDK Disclosure Rules

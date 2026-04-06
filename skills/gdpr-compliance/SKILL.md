@@ -1,7 +1,6 @@
 ---
 name: gdpr-compliance
-description: GDPR and international privacy law requirements for Android apps
-trigger: when generating a privacy policy or assessing compliance
+description: GDPR and international privacy law requirements for Android apps. Use when generating a privacy policy, assessing GDPR/CCPA/COPPA compliance, or writing data subject rights sections.
 ---
 
 ## GDPR Compliance for Android Apps

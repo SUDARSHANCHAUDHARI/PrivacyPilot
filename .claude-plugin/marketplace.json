@@ -4,8 +4,7 @@
     "description": "Generate Play Store-compliant Android privacy policies from manifest and Gradle files. Auto-deploys to GitHub Pages."
   },
   "owner": {
-    "name": "SUDARSHANCHAUDHARI",
-    "email": "sudarshantechlabs@gmail.com"
+    "name": "SUDARSHANCHAUDHARI"
   },
   "plugins": [
     {
@@ -15,8 +14,7 @@
       "source": "./",
       "category": "android",
       "author": {
-        "name": "SUDARSHANCHAUDHARI",
-        "email": "sudarshantechlabs@gmail.com"
+        "name": "SUDARSHANCHAUDHARI"
       },
       "homepage": "https://github.com/SUDARSHANCHAUDHARI/PrivacyPilot",
       "repository": "https://github.com/SUDARSHANCHAUDHARI/PrivacyPilot",

@@ -13,6 +13,9 @@
 .claude/
 .playwright-mcp/
 
+# Plugin per-project config — may contain personal details
+.claude-plugin-config.json
+
 # Local planning/spec files
 PLUGIN_3_PRIVACY_POLICY_GENERATOR.md
 

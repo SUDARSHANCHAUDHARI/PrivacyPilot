@@ -24,9 +24,18 @@ Deploy the generated privacy policy to GitHub Pages.
    - Set to Public (required for GitHub Pages)
    - Do NOT initialise with README
 
-5. Ask for explicit confirmation before any git operations.
+5. Before asking for confirmation, validate the remote repo is accessible:
+   ```bash
+   git ls-remote https://github.com/${user_config.github_username}/[appname-lowercase]-privacy-policy.git HEAD
+   ```
+   - If the command exits 0: repo exists and is reachable. Proceed.
+   - If it exits non-zero or errors: stop and tell the user:
+     > "The repo `[appname-lowercase]-privacy-policy` does not exist or is private. Please create it on GitHub (public, no README) and try again."
+   Do NOT attempt a push until this check passes.
 
-6. After confirmation, run these commands:
+6. Ask for explicit confirmation before any git operations.
+
+7. After confirmation, run these commands:
    ```bash
    cd privacy-policy
 
@@ -43,12 +52,12 @@ Deploy the generated privacy policy to GitHub Pages.
    git push -u origin main
    ```
 
-7. After push, remind the user to enable GitHub Pages if this is the first deployment:
+8. After push, remind the user to enable GitHub Pages if this is the first deployment:
    - Repo Settings → Pages → Source: Deploy from branch → main → / (root) → Save
    - URL goes live in 1–2 minutes
 
-8. Verify the URL is accessible:
+9. Verify the URL is accessible:
    `https://${user_config.github_username}.github.io/[appname-lowercase]-privacy-policy/`
 
-9. Remind the user to add this URL to Play Console:
+10. Remind the user to add this URL to Play Console:
    `Store Presence → Store Settings → Privacy policy URL`

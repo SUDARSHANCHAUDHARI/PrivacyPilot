@@ -52,20 +52,33 @@ Read all `<uses-permission>` tags and categorize:
 - FOREGROUND_SERVICE — run foreground service (not data collection)
 
 ## Output format
+
+Return a single JSON object. No prose before or after it.
+
+```json
+{
+  "permissions": {
+    "location": [
+      { "name": "ACCESS_FINE_LOCATION", "data_collected": "Precise GPS location" }
+    ],
+    "camera_media": [
+      { "name": "CAMERA", "data_collected": "Photos and videos captured by the app" }
+    ],
+    "contacts_identity": [],
+    "communication": [],
+    "biometric": [],
+    "notifications": [],
+    "network_device": [
+      { "name": "INTERNET", "data_collected": null }
+    ]
+  },
+  "sensitive": ["ACCESS_FINE_LOCATION", "CAMERA"],
+  "non_sensitive": ["INTERNET", "VIBRATE"]
+}
 ```
-PERMISSIONS DETECTED:
-Category: Location
-- ACCESS_FINE_LOCATION → Data collected: Precise location
-- ACCESS_COARSE_LOCATION → Data collected: Approximate location
 
-Category: Camera
-- CAMERA → Data collected: Photos/videos (if saved)
-
-[... etc]
-
-SENSITIVE PERMISSIONS (require explicit explanation in policy):
-[list of sensitive ones only]
-
-NON-SENSITIVE (no disclosure needed):
-INTERNET, VIBRATE, etc.
-```
+Rules:
+- Only include categories that have at least one permission present in the manifest.
+- Set `"data_collected": null` for non-sensitive permissions (INTERNET, VIBRATE, FOREGROUND_SERVICE, etc.).
+- `"sensitive"` must list every permission that requires explicit disclosure in the privacy policy.
+- `"non_sensitive"` lists permissions that do not require disclosure.

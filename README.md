@@ -17,6 +17,13 @@
 4. Generates a complete, mobile-friendly HTML privacy policy
 5. Deploys it to GitHub Pages and gives you the URL for Play Console
 
+## Why This Exists
+
+Manually maintaining privacy policies across 22+ apps was producing drift. Policies went out of sync when new permissions were added. URLs were sometimes missing from Play Console submissions. Each new app required remembering to create a policy, host it, and submit the URL.
+
+PrivacyPilot automates the entire policy lifecycle: it reads what your app actually collects (from the manifest and Gradle files), generates a compliant HTML policy, and deploys it to a predictable GitHub Pages URL. Every app gets a policy URL on first release. Policy updates are one command when permissions change.
+
+
 ---
 
 ## Install

@@ -42,9 +42,11 @@ A complete HTML privacy policy covering:
 10. **Contact us** — developer contact info
 
 ## Output file
-Read `templates/privacy-policy-template.html` from the PrivacyPilot plugin directory using the Read tool. Use it as your base. Replace every `{{PLACEHOLDER}}` token before writing.
+Read `${CLAUDE_PLUGIN_ROOT}/templates/privacy-policy-template.html` using the Read tool. Use it as your base. Replace every `{{PLACEHOLDER}}` token before writing.
 
 Use the Write tool to save to `output_path` from the context object above. Never save to any other location or repo.
+
+After writing, run `grep -n '{{' privacy-policy/index.html`. No output (grep exit 1) means the policy is complete. Any output line is an unreplaced placeholder: fix that line in `privacy-policy/index.html`, then run the grep again. Do not report success while it still prints lines.
 
 ## Placeholder substitution — replace ALL of these
 

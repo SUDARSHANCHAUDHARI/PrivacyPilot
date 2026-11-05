@@ -1,3 +1,7 @@
+---
+description: Update an existing privacy policy when app permissions or SDKs change.
+---
+
 Update an existing privacy policy when app permissions or SDKs change.
 
 ## Steps

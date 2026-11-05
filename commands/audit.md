@@ -1,3 +1,7 @@
+---
+description: Audit an Android app's manifest and existing privacy policy for compliance gaps.
+---
+
 Audit an Android app's manifest and existing privacy policy for compliance gaps.
 
 ## Steps

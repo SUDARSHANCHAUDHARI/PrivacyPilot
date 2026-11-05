@@ -1,3 +1,7 @@
+---
+description: Deploy the generated privacy policy to GitHub Pages.
+---
+
 Deploy the generated privacy policy to GitHub Pages.
 
 ## Steps
@@ -37,19 +41,27 @@ Deploy the generated privacy policy to GitHub Pages.
 
 7. After confirmation, run these commands:
    ```bash
-   cd privacy-policy
+   # Run this whole block as ONE Bash call: variables do not carry between calls.
+   # The subshell fails closed if split, and set -eu stops on any error or empty $TMP.
+   (
+   set -eu
+   # Fresh temp clone of the Pages repo. Never run git inside the app repo.
+   # pwd -P: git reports the resolved path (/private/var/...), mktemp returns /var/...
+   TMP="$(cd "$(mktemp -d)" && pwd -P)"
+   : "${TMP:?}"
+   git clone https://github.com/${user_config.github_username}/[appname-lowercase]-privacy-policy.git "$TMP"
 
-   # Initialise git only if not already a git repo
-   git rev-parse --git-dir > /dev/null 2>&1 || git init
+   # Copy only the policy file (copy any asset files by name the same way)
+   cp "$PWD/privacy-policy/index.html" "$TMP/"
 
-   # Set remote — update if it already exists
-   git remote get-url origin > /dev/null 2>&1 \
-     && git remote set-url origin https://github.com/${user_config.github_username}/[appname-lowercase]-privacy-policy.git \
-     || git remote add origin https://github.com/${user_config.github_username}/[appname-lowercase]-privacy-policy.git
+   # Abort unless the temp dir is its own repo root
+   [ "$(git -C "$TMP" rev-parse --show-toplevel)" = "$TMP" ] || { echo "ABORT: $TMP is not its own git repo" >&2; exit 1; }
 
-   git add index.html
-   git commit -m "Update privacy policy — $(date +%Y-%m-%d)"
-   git push -u origin main
+   git -C "$TMP" branch -M main
+   git -C "$TMP" add index.html
+   git -C "$TMP" commit -m "Update privacy policy — $(date +%Y-%m-%d)"
+   git -C "$TMP" push -u origin main
+   )
    ```
 
 8. After push, remind the user to enable GitHub Pages if this is the first deployment:

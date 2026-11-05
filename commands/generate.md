@@ -1,3 +1,7 @@
+---
+description: Generate a complete privacy policy for an Android app by scanning its manifest and dependencies.
+---
+
 Generate a complete privacy policy for an Android app by scanning its manifest and dependencies.
 
 ## Steps

@@ -24,10 +24,27 @@ Example: `yourapp-privacy-policy`
 
 ### Update workflow
 ```bash
-# In the policy repo directory
-git add index.html
-git commit -m "Update privacy policy — $(date +%Y-%m-%d)"
-git push origin main
+# Run this whole block as ONE Bash call: variables do not carry between calls.
+# The subshell fails closed if split, and set -eu stops on any error or empty $TMP.
+(
+set -eu
+# Fresh temp clone of the Pages repo. Never run git inside the app repo.
+# pwd -P: git reports the resolved path (/private/var/...), mktemp returns /var/...
+TMP="$(cd "$(mktemp -d)" && pwd -P)"
+: "${TMP:?}"
+git clone https://github.com/${user_config.github_username}/[appname-lowercase]-privacy-policy.git "$TMP"
+
+# Copy only the policy file (copy any asset files by name the same way)
+cp "$PWD/privacy-policy/index.html" "$TMP/"
+
+# Abort unless the temp dir is its own repo root
+[ "$(git -C "$TMP" rev-parse --show-toplevel)" = "$TMP" ] || { echo "ABORT: $TMP is not its own git repo" >&2; exit 1; }
+
+git -C "$TMP" branch -M main
+git -C "$TMP" add index.html
+git -C "$TMP" commit -m "Update privacy policy — $(date +%Y-%m-%d)"
+git -C "$TMP" push -u origin main
+)
 ```
 
 ### Verify deployment

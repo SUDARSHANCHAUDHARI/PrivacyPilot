@@ -50,6 +50,7 @@ When you enable the plugin, Claude Code prompts you for your developer details o
 | `/privacypilot:audit` | Audit an existing policy for compliance gaps |
 | `/privacypilot:github-page` | Deploy the generated policy to GitHub Pages |
 | `/privacypilot:update` | Update an existing policy when permissions or SDKs change |
+| `/privacypilot:data-safety` | Draft the Play Console Data Safety form answers from the same scan |
 
 ---
 
@@ -77,13 +78,15 @@ Reviews the deployment plan, asks for confirmation, then pushes to GitHub Pages.
 
 ```
 AndroidManifest.xml ──► manifest-reader ──┐
-                                           ├──► policy-writer ──► privacy-policy/index.html
+                                           ├──► policy-writer ──► privacy-policy/index.html ──► policy-verifier
 build.gradle ────────► sdk-detector ───────┘
 ```
 
 - **manifest-reader** — extracts and categorizes all permissions
 - **sdk-detector** — identifies third-party SDKs and their data collection practices
 - **policy-writer** — generates a complete, Play Store-compliant HTML privacy policy
+- **policy-verifier** — checks the generated policy against the scan with a fixed 9-point checklist
+  (unfilled placeholders, undisclosed permissions or SDKs, deletion, contact, date, markup in names)
 
 ---
 
@@ -122,8 +125,8 @@ PrivacyPilot/
 ├── .claude-plugin/
 │   ├── plugin.json              # Plugin manifest + userConfig
 │   └── marketplace.json         # Marketplace manifest
-├── commands/                    # /privacypilot:generate|audit|github-page|update
-├── agents/                      # manifest-reader, sdk-detector, policy-writer
+├── commands/                    # /privacypilot:generate|audit|github-page|update|data-safety
+├── agents/                      # manifest-reader, sdk-detector, policy-writer, policy-verifier
 ├── skills/                      # permission-data-map, sdk-disclosure-rules,
 │                                #   gdpr-compliance, play-data-safety, github-pages-deploy
 ├── templates/

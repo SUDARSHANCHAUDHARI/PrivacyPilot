@@ -33,7 +33,11 @@ Generate a complete privacy policy for an Android app by scanning its manifest a
    - Full SDK output from sdk-detector
    - Save path: `privacy-policy/index.html` in the current project directory
 
-5. Output summary:
+5. Spawn policy-verifier agent on `privacy-policy/index.html`, passing the same manifest-reader and
+   sdk-detector output. If any check fails, show its report and do not suggest deploying until the
+   failures are fixed.
+
+6. Output summary:
    ```
    PRIVACY POLICY GENERATED
    ─────────────────────────

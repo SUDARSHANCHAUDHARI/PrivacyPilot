@@ -6,6 +6,20 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [Unreleased]
+
+### Added
+- `/privacypilot:data-safety` — drafts the Play Console Data Safety answers from the manifest and
+  Gradle scan, marks every answer the files cannot prove as CONFIRM, and takes its inputs as
+  arguments so it also runs non-interactively
+- `policy-verifier` agent — checks a generated policy against the scan with a fixed 9-point
+  checklist: unfilled `{{PLACEHOLDER}}` tokens, undisclosed sensitive permissions or SDKs,
+  advertising ID, data deletion, contact, effective date, markup in names, unsupported claims
+
+### Changed
+- `/privacypilot:generate` runs `policy-verifier` after writing the policy and holds back the deploy
+  suggestion until every check passes (fixes raw placeholder tokens reaching the live page)
+
 ## [1.0.0] — 2026-04-05
 
 ### Added
